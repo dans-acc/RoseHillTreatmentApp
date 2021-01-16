@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:fitsSystemWindows="true">
+
+    <!-- Action bar displayed at the top of the activity screen. -->
+    <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+        <!-- Toolbar is employed because action bar is depreciated. -->
+        <android.support.v7.widget.Toolbar
+                android:id="@+id/activity_base_week_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:minHeight="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- What is actually displayed to the user. -->
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <!-- The layout encapsulates fields for displaying the week summary -->
+        <RelativeLayout
+                android:id="@+id/activity_base_week_layout_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_bottom"
+                android:minHeight="72dp"
+                android:paddingEnd="?listPreferredItemPaddingRight"
+                android:paddingLeft="?listPreferredItemPaddingLeft"
+                android:paddingRight="?listPreferredItemPaddingRight"
+                android:paddingStart="?listPreferredItemPaddingLeft"
+                android:descendantFocusability="blocksDescendants">
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignWithParentIfMissing="true"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toStartOf="@+id/activity_base_week_ib_summary_complete_week_action"
+                    android:layout_toLeftOf="@+id/activity_base_week_ib_summary_complete_week_action"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:orientation="vertical"
+                    android:paddingBottom="16dp"
+                    android:paddingTop="16dp">
+
+                <!-- The field represents the weeks total number of treatments -->
+                <LinearLayout
+                        android:id="@+id/activity_base_week_layout_summary_treat_count"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:singleLine="true"
+                            android:text="@string/activity_base_week_tv_summary_treat_count_label"
+                            style="@style/TextAppearance.AppCompat.Body1"/>
+                    <TextView
+                            android:id="@+id/activity_base_week_tv_summary_treat_count_field"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/not_applicable"
+                            style="@style/TextAppearance.AppCompat.Body1"/>
+                </LinearLayout>
+
+                <!-- The field represents the weeks total volume. -->
+                <LinearLayout
+                        android:id="@+id/activity_base_week_layout_summary_week_total_volume"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:singleLine="true"
+                            android:text="@string/activity_base_week_tv_summary_week_total_volume_label"
+                            style="@style/TextAppearance.AppCompat.Body1"/>
+                    <TextView
+                            android:id="@+id/activity_base_week_tv_summary_week_total_volume_field"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="4dp"
+                            android:layout_marginEnd="4dp"
+                            android:singleLine="true"
+                            android:text="@string/not_applicable"
+                            style="@style/TextAppearance.AppCompat.Body1"/>
+
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="@string/util_volume_units"
+                            style="@style/TextAppearance.AppCompat.Body1"/>
+
+                </LinearLayout>
+
+                <!-- Field represents the error message displayed when no week data can be summarised. -->
+                <LinearLayout
+                        android:id="@+id/activity_base_week_layout_summary_undefined_week_message"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:singleLine="false"
+                            android:text="@string/activity_base_week_tv_summary_undefined_week_date_message"
+                            style="@style/TextAppearance.AppCompat.Body2"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                    android:id="@+id/activity_base_week_ib_summary_complete_week_action"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_centerVertical="true"
+                    android:focusable="false"
+                    android:text="@string/util_complete"
+                    android:visibility="gone"
+                    android:contentDescription="@string/activity_base_week_ib__summarycomplete_current_week_content_description"/>
+
+        </RelativeLayout>
+
+        <!-- Button employed for defining a new week or adding new treatments. -->
+        <Button
+                android:id="@+id/activity_base_week_btn_create_new"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/create_new_btn_height"
+                android:layout_alignParentBottom="true"
+                android:textAlignment="center"
+                android:text="@string/activity_current_week_btn_define_new_week_name"/>
+
+        <!-- ListView employed for displaying treats to the user. -->
+        <ListView
+                android:id="@+id/activity_base_week_lv_treats"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/activity_base_week_layout_summary"
+                android:layout_above="@id/activity_base_week_btn_create_new"/>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

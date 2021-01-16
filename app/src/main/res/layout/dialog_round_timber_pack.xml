@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+    <!-- Input used for requesting the pack quantity. -->
+    <EditText
+            android:id="@+id/dialog_round_pack_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/util_quality"
+            android:autofillHints="TEST1"
+            android:inputType="number"/>
+
+    <!-- Input used for requesting the pack length -->
+    <EditText
+            android:id="@+id/dialog_round_pack_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_round_pack_quantity"
+            android:layout_alignParentStart="true"
+            android:hint="@string/util_length"
+            android:inputType="numberDecimal"
+            android:autofillHints="TEST2"/>
+
+    <!-- Input used for requesting the pack diameter. -->
+    <EditText
+            android:id="@+id/dialog_round_pack_diameter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_round_pack_length"
+            android:layout_alignParentStart="true"
+            android:hint="@string/util_diameter"
+            android:inputType="numberDecimal"
+            android:autofillHints="TEST3"/>
+
+</RelativeLayout>

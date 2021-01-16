@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+    <!-- Input used for requesting the pack quantity. -->
+    <EditText
+            android:id="@+id/dialog_cuboid_pack_et_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/util_quality"
+            android:autofillHints="TEST1"
+            android:inputType="number"/>
+
+    <!-- Input used for requesting the pack length -->
+    <EditText
+            android:id="@+id/dialog_cuboid_pack_et_length"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_cuboid_pack_et_quantity"
+            android:layout_alignParentStart="true"
+            android:hint="@string/util_length"
+            android:inputType="numberDecimal"
+            android:autofillHints=""/>
+
+    <!-- Input used for requesting the pack breadth -->
+    <EditText
+            android:id="@+id/dialog_cuboid_pack_et_breadth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_cuboid_pack_et_length"
+            android:layout_alignParentStart="true"
+            android:hint="@string/util_breadth"
+            android:inputType="number"
+            android:autofillHints=""/>
+
+    <!-- Input used for requesting the pack height. -->
+    <EditText
+            android:id="@+id/dialog_cuboid_pack_et_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dialog_cuboid_pack_et_breadth"
+            android:layout_alignParentStart="true"
+            android:hint="@string/util_height"
+            android:inputType="number"
+            android:autofillHints=""/>
+
+
+</RelativeLayout>

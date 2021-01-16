@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".activities.CurrentWeekActivity">
+
+    <!-- Permits the user to cancel the enter deletion / edit process -->
+    <item
+            android:id="@+id/menu_prior_week_item_cancel_new_or_delete_action"
+            android:title="@android:string/cancel"
+            android:orderInCategory="1"
+            app:showAsAction="ifRoom"/>
+
+    <!-- Item permits the cancellation of the edit mode. -->
+    <item
+            android:id="@+id/menu_prior_week_item_undo_delete_action"
+            android:title="@string/util_undo"
+            android:orderInCategory="2"
+            app:showAsAction="ifRoom"/>
+
+    <!-- Clicked by the user in order to edit prior week -->
+    <item
+            android:id="@+id/menu_prior_week_item_new_or_delete_treat_action"
+            android:title="@string/util_new_delete"
+            android:orderInCategory="3"
+            app:showAsAction="ifRoom"/>
+
+    <!-- Item permits the edit mode to be saved. -->
+    <item
+            android:id="@+id/menu_prior_week_item_save_week_action"
+            android:title="@string/util_save"
+            android:orderInCategory="4"
+            app:showAsAction="ifRoom"/>
+
+</menu>

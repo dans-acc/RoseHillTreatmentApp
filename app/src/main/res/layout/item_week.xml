@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:minHeight="72dp"
+        android:paddingEnd="?listPreferredItemPaddingRight"
+        android:paddingLeft="?listPreferredItemPaddingLeft"
+        android:paddingRight="?listPreferredItemPaddingRight"
+        android:paddingStart="?listPreferredItemPaddingLeft"
+        android:descendantFocusability="blocksDescendants">
+
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toStartOf="@+id/item_week_ib_download_action"
+            android:layout_toLeftOf="@+id/item_week_ib_download_action"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
+
+        <!-- The week date field.-->
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:singleLine="true"
+                    android:text="@string/item_week_tv_date_label"
+                    style="@style/TextAppearance.AppCompat.Body2"/>
+            <TextView
+                    android:id="@+id/item_week_tv_date_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/not_applicable"
+                    style="@style/TextAppearance.AppCompat.Body2"/>
+        </LinearLayout>
+
+        <!-- The week number field. -->
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:singleLine="true"
+                    android:text="@string/item_week_tv_week_number_label"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+            <TextView
+                    android:id="@+id/item_week_tv_week_number_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/not_applicable"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+        </LinearLayout>
+
+        <!-- The number of treatments within the week. -->
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:singleLine="true"
+                    android:text="@string/item_week_tv_treatments_count_label"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+            <TextView
+                    android:id="@+id/item_week_tv_treatment_count_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/not_applicable"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Image button employed in order to write the week data to the list. -->
+    <ImageButton
+            android:id="@+id/item_week_ib_download_action"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:focusable="false"
+            android:src="@drawable/ic_archive"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/item_week_lv_download_option_content_description"/>
+
+</RelativeLayout>

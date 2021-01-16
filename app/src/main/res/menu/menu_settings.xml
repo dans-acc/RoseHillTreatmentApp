@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".activities.SettingsActivity">
+
+    <!-- Option for backing up all the files within the database. -->
+    <item
+            android:id="@+id/menu_settings_item_export_yearly_summary_action"
+            android:title="@string/menu_settings_item_export_yearly_summary_name"
+            android:orderInCategory="1"
+            app:showAsAction="never"/>
+
+    <!-- Action for deleting all the files in the database. -->
+    <item
+            android:id="@+id/menu_settings_item_delete_exported_files_action"
+            android:title="@string/menu_settings_item_delete_exported_files_name"
+            android:orderInCategory="2"
+            app:showAsAction="never"/>
+
+    <!-- OOption for clearing out the database-->
+    <item
+            android:id="@+id/menu_settings_item_truncate_tables_action"
+            android:title="@string/menu_settings_item_truncate_tables_name"
+            android:orderInCategory="3"
+            app:showAsAction="never"/>
+
+    <!-- Setting for resetting the financial year. -->
+    <item
+            android:id="@+id/menu_settings_item_reset_financial_year_action"
+            android:title="@string/menu_settings_item_reset_financial_year_name"
+            android:orderInCategory="4"
+            app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,445 @@
+<resources>
+
+    <!-- SHARED PREFERENCE STRING RESOURCES -->
+    <string name="shared_preference_name" translatable="false">uk.co.rosehilltimber.rosehilltreatmentapp.shared_preferences</string>
+
+    <string name="shared_preference_key_passcode" translatable="false">PASSCODE</string>
+    <string name="shared_preference_key_one_drive_app_id" translatable="false">ONE_DRIVE_APP_ID</string>
+    <string name="shared_preference_key_start_of_financial_year" translatable="false">START_OF_FINANCIAL_YEAR</string>
+    <string name="shared_preference_key_end_of_financial_year" translatable="false">END_OF_FINANCIAL_YEAR</string>
+    <string name="shared_preference_key_initial_treat_number" translatable="false">INITIAL_TREAT_NUMBER</string>
+    <string name="shared_preference_key_current_week" translatable="false">CURRENT_WEEK</string>
+    <string name="shared_preference_key_maximum_green_tank_volume" translatable="false">MAXIMUM_GREEN_TANK_VOLUME</string>
+    <string name="shared_preference_key_maximum_brown_tank_volume" translatable="false">MAXIMUM_BROWN_TANK_VOLUME</string>
+
+    <string name="shared_preference_summary_passcode">Define the applications settings passcode - necessary to avoid tampering. Note: failing to recall the password will result in your ability to reconfigure the application settings.</string>
+    <string name="shared_preference_summary_one_drive_app_id">The registered Microsoft OneDrive App ID. This permits exported files to be backed / saved to the cloud.</string>
+    <string name="shared_preference_summary_start_of_financial_year">The start date of the financial year. Note: changing this date mid-year will result in undefined app behaviour, week offsets, and potentially corrupt data.</string>
+    <string name="shared_preference_summary_end_of_financial_year">The end date of the financial year. However, unlike the start date, the end date does not impose strict algorithmic requirements. Instead, this serves as a means of validating week date boundaries.</string>
+    <string name="shared_preference_summary_initial_treat_number">Defines the smallest number permissible within the database.</string>
+    <string name="shared_preference_summary_current_week">Denotes the date (or timestamp) of the week currently being worked on.</string>
+    <string name="shared_preference_summary_maximum_green_tank_volume">Imposes a strict maximum tank volume for the green treatment tank. Exceeding this value during treat creation will result the users ability to create / save the defined / updated treat for Green or Round Green treat types.</string>
+    <string name="shared_preference_summary_maximum_brown_tank_volume">Imposes a strict maximum tank volume for the brown treatment tank. Exceeding this value during treat creation will result the users ability to create / save the defined / updated treat for Brown treat type.</string>
+
+    <!-- UTILITY STRING RESOURCES -->
+    <string name="util_save">SAVE</string>
+    <string name="util_edit">EDIT</string>
+    <string name="util_delete">DELETE</string>
+    <string name="util_complete">COMPLETE</string>
+    <string name="util_continue">CONTINUE</string>
+    <string name="util_leave">LEAVE</string>
+    <string name="util_undo">UNDO</string>
+    <string name="util_update">UPDATE</string>
+    <string name="util_create">CREATE</string>
+    <string name="util_proceed_anyway">PROCEED ANYWAY</string>
+    <string name="util_proceed">PROCEED</string>
+    <string name="util_treat">Treat</string>
+    <string name="util_treats">Treats</string>
+    <string name="util_treatments">Treatments</string>
+    <string name="util_volume">Volume</string>
+    <string name="util_new">NEW</string>
+    <string name="util_quality">Quantity</string>
+    <string name="util_length">Length (m)</string>
+    <string name="util_diameter">Diameter (m)</string>
+    <string name="util_breadth">Breadth (mm)</string>
+    <string name="util_height">Height (mm)</string>
+    <string name="util_new_delete">NEW\\DELETE</string>
+    <string name="util_new_treat">NEW TREATMENT</string>
+    <string name="util_new_week">NEW WEEK</string>
+    <string name="util_volume_units">m\u00B3</string>
+    <string name="util_passcode">PASSCODE</string>
+    <string name="util_truncate_tables">TRUNCATE TABLES</string>
+    <string name="util_reset_financial_year">RESET FINANCIAL YEAR</string>
+    <string name="util_delete_exported_files">DELETE EXPORTED FILES</string>
+    <string name="util_initial_treat_number">Initial Treatment Number</string>
+    <string name="util_one_drive_app_id">OneDrive AppID</string>
+    <string name="util_number">Number</string>
+
+    <string name="field_quantity_label">Quantity:</string>
+
+    <string name="tab_database">DATABASE</string>
+    <string name="tab_exported_files">EXPORTED FILES</string>
+
+    <!-- DIALOG STRING RESOURCES -->
+    <string name="dialog_title_initial_treat_number_overflow">Error - Invalid Initial Treat Number!</string>
+    <string name="dialog_title_passcode_too_short_cant_set">Error - Passcode Too Short!</string>
+    <string name="dialog_title_leaving_in_edit_mode">Discard Changes?</string>
+    <string name="dialog_title_enter_edit_mode">Enter Edit-Mode?</string>
+    <string name="dialog_title_save_edits">Save Edits?</string>
+    <string name="dialog_title_select_timber_pack_type">Timber Pack Type</string>
+    <string name="dialog_title_tank_volume_reached">Tank Volume Reached!</string>
+    <string name="dialog_title_treat_creation_confirmation">Create Treat?</string>
+    <string name="dialog_title_invalid_timber_pack_dimensions">Invalid Dimensions!</string>
+    <string name="dialog_title_timber_pack_deletion_conformation">Delete Timber Pack?</string>
+    <string name="dialog_title_confirm_new_current_week_date">Confirm New Current Week Date</string>
+    <string name="dialog_title_week_date_before_the_start_of_financial_year">Invalid Date!</string>
+    <string name="dialog_title_week_date_after_the_end_of_financial_year">Warning!</string>
+    <string name="dialog_title_select_treat_type">Select Treat Type</string>
+    <string name="dialog_title_complete_current_working_week">Complete Current Working Week?</string>
+    <string name="dialog_title_treat_deletion_confirmation">Delete Treat Instance?</string>
+    <string name="dialog_title_select_current_week_date">Select Current Week Date</string>
+    <string name="dialog_title_cancel_edits">Cancel?</string>
+    <string name="dialog_title_please_wait">Please Wait..</string>
+    <string name="dialog_title_creation_failure">Creation Failure!</string>
+    <string name="dialog_title_update_failure">Update Failure!</string>
+    <string name="dialog_title_treat_creation_failure_no_timber_packs">No Data!</string>
+    <string name="dialog_title_treat_save_failure_no_changes">Error - No Changes!</string>
+    <string name="dialog_title_treat_save_failure_no_timber_packs">Error - No Timber Packs!</string>
+    <string name="dialog_title_failed_to_delete_file">Error - Failed To Delete The File.</string>
+    <string name="dialog_title_one_drive_undefined_or_invalid_app_id">Error - Invalid App ID!</string>
+    <string name="dialog_title_one_drive_out_of_quota">Error - Out of Quota!</string>
+    <string name="dialog_title_one_drive_invalid_file_name">Error - Invalid File Name!</string>
+    <string name="dialog_title_one_drive_no_network_connection">Error - No Network Connectivity!</string>
+    <string name="dialog_title_one_drive_cant_access_file">Error - Could Not Access File!</string>
+    <string name="dialog_title_one_drive_no_file_specified">Error - No File Specified!</string>
+    <string name="dialog_title_one_drive_unknown">Error Unknown!</string>
+    <string name="dialog_title_media_unmounted">Error - SD Card Unmounted!</string>
+    <string name="dialog_title_treat_directory_not_found">Error - Treat Directory Not Found!</string>
+    <string name="dialog_title_undefined_financial_year">Error - Undefined Financial Year Dates!</string>
+    <string name="dialog_title_delete_current_week_treatment">Delete Treatment?</string>
+    <string name="dialog_title_save_prior_week_deletions">Save Deletions?</string>
+    <string name="dialog_title_cannot_save_prior_week_no_deletions_detected">Error - No Deletions!</string>
+    <string name="dialog_title_creating_a_treat_leaves_edit_mode">Leaving Edit-Mode!</string>
+    <string name="dialog_title_settings_authorisation">Passcode</string>
+    <string name="dialog_title_invalid_passcode">Invalid Passcode!</string>
+    <string name="dialog_title_max_tank_volume_overflow">Error - Tank Overflow!</string>
+    <string name="dialog_title_end_of_financial_year_before_start">Error - Invalid End of Financial Year Date!</string>
+    <string name="dialog_title_start_of_financial_year_after_end">Error - Invalid Start of Financial Year Date!</string>
+    <string name="dialog_title_financial_year_longer_than_year">Warning - Long Financial Year!</string>
+    <string name="dialog_title_confirm_truncate_tables">Drop Tables?</string>
+    <string name="dialog_title_confirm_reset_financial_year">Reset Financial Year?</string>
+    <string name="dialog_title_confirm_delete_all_exported_files">Delete All Exported Files?</string>
+    <string name="dialog_title_financial_year_successfully_reset">Financial Year Reset!</string>
+    <string name="dialog_title_failed_to_reset_financial_year">Error - Failed to Reset Financial Year!</string>
+    <string name="dialog_title_tables_successfully_truncated">Tables Successfully Truncated!</string>
+    <string name="dialog_title_failed_to_truncate_tables">Error - Failed to Truncate Tables!</string>
+    <string name="dialog_title_successfully_deleted_all_exported_files">Files Successfully Deleted</string>
+    <string name="dialog_title_failed_to_delete_all_exported_files">Error - Failed to Delete All Exported Files!</string>
+    <string name="dialog_title_successfully_exported_a_yearly_summary">Yearly Summary Successfully Exported</string>
+    <string name="dialog_title_failed_to_export_yearly_summary">Error - Failed to Export Yearly Summary!</string>
+
+    <string name="dialog_message_initial_treat_number_overflow">Please ensure that a valid - unsigned (non-negative) - is provided.</string>
+    <string name="dialog_message_passcode_too_short_cant_set">Unable to set the passcode! Please ensure the passcode is 4 or more numbers long.</string>
+    <string name="dialog_message_leaving_in_edit_mode">By leaving, any unsaved changes will be discarded and thus unobtainable. Do you still wish to leave?</string>
+    <string name="dialog_message_enter_edit_mode">Do you wish to enter Edit Mode? In doing so, you will be able to alter the current instance. However! Remember that changes will not be synced to the database unless you explicitly do so i.e. by clicking \'SAVE\'</string>
+    <string name="dialog_message_save_edits">Do you wish to save any and all updates / edits made during this session? Please confirm!</string>
+    <string name="dialog_message_tank_volume_reached">Unable to save / add / create timber pack - the maximum tank volume has been reached. Check that this is not a dimension related issue. Alternatively, navigate to the settings menu to increase the maximum tank capacity.</string>
+    <string name="dialog_message_treat_creation_confirmation">Please ensure that the defined treatment is correct. If so, confirm the creation of this treat instance.</string>
+    <string name="dialog_message_invalid_timber_pack_dimensions">Unable to proceed! Please check that all pack dimensions have been filled in are valid.</string>
+    <string name="dialog_message_timber_pack_deletion_conformation">Please confirm that you wish to delete the timber pack. Otherwise, cancel the operation.</string>
+    <string name="dialog_message_confirm_new_current_week_date">Selected week date - %1$s; set the new current week date to the week beginning on the %2$s (%3$d)?</string>
+    <string name="dialog_message_week_date_before_the_start_of_financial_year">Unfortunately you cannot define a week date that precedes the date on which the financial year begins.</string>
+    <string name="dialog_message_week_date_after_the_end_of_financial_year">The date being set is after the end of the financial year. Though strictly not imposed, when choosing the current week date, one should abide by the applications defined financial year. Do you wish to proceed?</string>
+    <string name="dialog_message_complete_current_working_week">By completing the current working week, new treatment data can be defined. However, revisiting completed weeks can to some degree be regarded as an application intensive process. Please confirm whether or not the current working week is to be marked as completed.</string>
+    <string name="dialog_message_treat_deletion_confirmation">Please confirm that you wish to delete the treatment instance. Otherwise, cancel the operation.</string>
+    <string name="dialog_message_cancel_edits">By canceling edit mode any changes that have not been submitted to the database will consequently be discarded. Do you wish to cancel?</string>
+    <string name="dialog_message_please_wait_creating_treat">Creating a new treatment instance...</string>
+    <string name="dialog_message_please_wait_saving_treat">Saving treatment updates...</string>
+    <string name="dialog_message_please_wait_deleting_treats">Deleting treatment instances...</string>
+    <string name="dialog_message_failed_to_create_treat">Unfortunately the application failed to create the treatment instance. Try again or check that the application settings are correct.</string>
+    <string name="dialog_message_failed_to_update_treat">Unfortunately the application failed to update the treatment instance. Try again or check that the application settings are correct.</string>
+    <string name="dialog_message_treat_creation_failure_no_timber_packs">In order to create a treat instance, one or more timber packs must be defined.</string>
+    <string name="dialog_message_treat_save_failure_no_changes">No changes detected. In order to save changes, please alter the current treat instance. Otherwise exit edit mode.</string>
+    <string name="dialog_message_treat_save_failure_no_timber_packs">Unable to save the treatment instance as this will result in all timber pack instances being deleted. If you desire to delete this treat, from the appropriate \'WEEK\'.</string>
+    <string name="dialog_message_failed_to_delete_file">The application failed to delete the file. Please check that all permissions have been granted to the app. Additionally, ensure that the SD card is present and correctly formatted.</string>
+    <string name="dialog_message_one_drive_undefined_or_invalid_app_id">Check that the OneDrive App ID has been set and is valid. Moreover, check that the relevant read / write permissions have been granted to the app via the Microsoft Azure portal.</string>
+    <string name="dialog_message_one_drive_out_of_quota">Your OneDrive account did not have enough quota available to save the file.</string>
+    <string name="dialog_message_one_drive_invalid_file_name">The file could not be saved onto OneDrive because it contained unsupported characters.</string>
+    <string name="dialog_message_one_drive_no_network_connection">No network connectivity was available when attempting to save the file.</string>
+    <string name="dialog_message_one_drive_cant_access_file">The file could not be accessed. Please ensure that the SD card is both present and correctly formatted. Moreover, check that the application has its appropriate settings granted.</string>
+    <string name="dialog_message_one_drive_no_file_specified">No file was specified to be saved, or the file URI scheme was not supported, content:// and file:// are currently supported</string>
+    <string name="dialog_message_one_drive_unknown">The error type was not known. Please check the applications console for debugging information.</string>
+    <string name="dialog_message_media_unmounted">You are no longer able to export files - the external SD Card has been unmounted. Please ensure the SD Card is both present and correctly formatted. Moreover, check that the application has its appropriate settings granted.</string>
+    <string name="dialog_message_treat_directory_not_found">The application was unable to access the Treat file directory.  Please ensure the SD Card is both present and correctly formatted. Moreover, check that the application has its appropriate settings granted.</string>
+    <string name="dialog_message_undefined_financial_year">The application was unable to perform the desired operation due to undefined financial year dates. Please navigate to the settings preference menu in order to set both the start and end dates of the financial year.</string>
+    <string name="dialog_message_delete_current_week_treatment">Please confirm that you wish to delete treatment %1$d from the current week. Note: this operation cannot be undone given that it is being invoked on the current working week.</string>
+    <string name="dialog_message_save_prior_week_deletions">Would you like to save the deletions made? Note: in doing so, the app will implicitly offset subsequent treatment numbers thereby invalidating any previously treatment files.</string>
+    <string name="dialog_message_cannot_save_prior_week_no_deletions_detected">No deletions were detected. Please ensure that this is not a mistake. However, if you wish to leave Edit-Mode and not delete any treatments, simply click CANCEL.</string>
+    <string name="dialog_message_creating_a_treat_leaves_edit_mode">Creating a new treatment will result in Edit-Mode being canceled. Thus, any deletions that have not been saved will be lost. Do you wish to continue?</string>
+    <string name="dialog_message_settings_authorisation">
+        WARNING: Unauthorized access to this system is forbidden and will be
+        prosecuted by law. By accessing this system, you agree that your
+        actions may be monitored if unauthorized usage is suspected.
+    </string>
+    <string name="dialog_message_invalid_passcode">An invalid passcode was provided. Please try again. Note: if you are not authorised to alter the applications settings, please refrain from attempting to gain access.</string>
+    <string name="dialog_message_max_tank_volume_overflow">Chosen tank volume exceeds the maximum value representable by the float data type.</string>
+    <string name="dialog_message_end_of_financial_year_before_start">The end date of the financial year cannot precede the start date of the financial year.</string>
+    <string name="dialog_message_start_of_financial_year_after_end">The start date of the financial year cannot succeed the end date of the financial year.</string>
+    <string name="dialog_message_financial_year_longer_than_year">The set date results in the duration of the financial year surpassing 12 months. Please change this if this is not desired.</string>
+    <string name="dialog_message_confirm_truncate_tables">By dropping the internal SQLite tables, all data relating to treatments will be lost, and thus unrecoverable! Please ensure that a backup has been taken prior to proceeding with this action.</string>
+    <string name="dialog_message_confirm_reset_financial_year">By resetting the financial year: all current financial year settings will be reset; any exported files will be deleted; and the database will be truncated. Please ensure that backups have been made!</string>
+    <string name="dialog_message_confirm_delete_all_exported_files">This operation will result in all exported XLS (Excel) treat files being deleted. Do you wish to delete all files?</string>
+    <string name="dialog_message_financial_year_successfully_reset">The financial year has been successfully reset! Please reconfigure the financial year related application parameters.</string>
+    <string name="dialog_message_failed_to_reset_financial_year">Unfortunately the application failed to reset the financial year! Please try again or report this as an issue.</string>
+    <string name="dialog_message_please_wait_resetting_financial_year">Resetting Financial Year...</string>
+    <string name="dialog_message_tables_successfully_truncated">Tables have been successfully truncated. Thus, the initial treatment will start at the defined Initial Treat Number.</string>
+    <string name="dialog_message_failed_to_truncate_tables">Unfortunately the database failed to truncate the tables. Please try again or report this as an issue.</string>
+    <string name="dialog_message_please_wait_truncating_tables">Truncating tables...</string>
+    <string name="dialog_message_please_wait_deleting_all_exported_files">Deleting all exported files...</string>
+    <string name="dialog_message_successfully_deleted_all_exported_files">The external file directory has been cleared of all previously exported XLS (Excel) files.</string>
+    <string name="dialog_message_failed_to_delete_all_exported_files">Failed to delete exported XLS (Excel) files. Please try again or report this as an issue.</string>
+    <string name="dialog_message_please_wait_exporting_yearly_summary">Exporting the yearly summary...</string>
+    <string name="dialog_message_successfully_exported_a_yearly_summary">Having exported the yearly summary, please be sure to back it up! This is achieved by navigating to the EXPORTED FILES tab within the TREATMENT LOG.</string>
+    <string name="dialog_message_failed_to_export_yearly_summary">Unfortunately the application failed to export a yearly summary - check that the SD card is: present and correctly formatted. Additionally, check that the app has external file write and read permissions granted. Otherwise, please try again or report this as an issue.</string>
+
+
+    <!-- TOAST STRING RESOURCES -->
+    <string name="toast_treat_builder_operation_successfully_undone">%1$s operation undone</string>
+    <string name="toast_failed_to_undo_treat_builder_operation">Failed to undo treat builder operation</string>
+    <string name="toast_deleted_treat_undone">Deleted treat %1$d undone</string>
+    <string name="toast_file_successfully_deleted">File successfully deleted</string>
+    <string name="toast_treat_successfully_created">Treat successfully created</string>
+    <string name="toast_treat_successfully_updated">Treat successfully updated</string>
+    <string name="toast_file_upload_cancelled">File upload canceled</string>
+    <string name="toast_file_upload_successful">File has been successfully uploaded</string>
+    <string name="toast_deletion_successful">Deletion successful</string>
+
+    <!-- SETTINGS PREFERENCE FRAGMENT STRING RESOURCES -->
+    <string name="fragment_settings_preference_title">App Preferences</string>
+
+    <string name="fragment_settings_preference_alert_title_request_passcode">Passcode</string>
+    <string name="fragment_settings_preference_alert_et_error_request_passcode">Invalid passcode, try again!</string>
+
+    <string name="fragment_settings_preference_category_authentication">Authentication Settings</string>
+    <string name="fragment_settings_preference_etp_passcode">Application Settings Passcode</string>
+    <string name="fragment_settings_preference_etp_one_drive_app_id">OneDrive App ID</string>
+    <string name="fragment_settings_preference_etp_dialog_title_passcode">Application Passcode</string>
+    <string name="fragment_settings_preference_etp_dialog_title_one_drive_app_id">Microsoft OneDrive App ID</string>
+
+    <string name="fragment_settings_preference_category_financial_year">Financial Year</string>
+    <string name="fragment_settings_preference_dialog_title_end_of_financial_year">Financial Year Start Date</string>
+    <string name="fragment_settings_preference_dialog_title_start_of_financial_year">Financial Year End Date</string>
+
+    <string name="fragment_settings_preference_category_treats">Treatments</string>
+    <string name="fragment_settings_preference_etp_initial_treat_number">Initial Treat Number</string>
+    <string name="fragment_settings_preference_etp_dialog_initial_treat_number">Initial Treatment Number</string>
+
+    <string name="fragment_settings_preference_category_tank_volumes">Maximum Tank Volumes</string>
+    <string name="fragment_settings_preference_etp_maximum_green_tank_volume">Green Tank</string>
+    <string name="fragment_settings_preference_etp_maximum_brown_tank_volume">Brown Tank</string>
+    <string name="fragment_settings_preference_etp_dialog_title_maximum_green_tank_volume">Green Tank Maximum Volume</string>
+    <string name="fragment_settings_preference_etp_dialog_title_maximum_brown_tank_volume">Brown Tank Maximum Volume</string>
+
+    <string name="fragment_settings_preference_dialog_title_passcode_too_short">Invalid Passcode!</string>
+    <string name="fragment_settings_preference_dialog_msg_passcode_too_short">Please ensure that the passcode is 4 [or more] numbers long. A weak passcode may result unauthorised access.</string>
+    <string name="fragment_settings_preference_dialog_title_invalid_start_of_financial_year">Invalid Date!</string>
+    <string name="fragment_settings_preference_dialog_msg_invalid_start_of_financial_year">Please ensure that the start date of the financial year is not after [or equal to] the end date.</string>
+    <string name="fragment_settings_preference_dialog_title_invalid_end_of_financial_year">Invalid Date!</string>
+    <string name="fragment_settings_preference_dialog_msg_invalid_end_of_financial_year">Please ensure that the end date of the financial year does not precede [or is equal to] the start date.</string>
+    <string name="fragment_settings_preference_dialog_title_one_drive_app_id_too_short">Invalid OneDrive App ID</string>
+    <string name="fragment_settings_preference_dialog_msg_one_drive_app_id_too_short">Please ensure that the OneDrive App ID is valid.</string>
+    <string name="fragment_settings_preference_dialog_title_financial_year_too_long">Warning!</string>
+    <string name="fragment_settings_preference_dialog_msg_financial_year_too_long">The defining financial year is greater than 12 months. Disregard this message if this is intentional, otherwise click on the preference to correct it.</string>
+    <string name="fragment_settings_preference_dialog_title_tank_volume_overflow">Invalid Tank Volume!</string>
+    <string name="fragment_settings_preference_dialog_msg_tank_volume_overflow">The set tank volume exceeds the maximum value that can be represented by a float data type.</string>
+    <string name="fragment_settings_preference_dialog_title_initial_treat_number_overflow">Invalid Treat Number!</string>
+    <string name="fragment_settings_preference_dialog_msg_initial_treat_number_overflow">Unfortunately the maximum treat number has been reached - either consider resetting the treat number to 0.</string>
+
+    <!-- General application string resources. -->
+    <string name="app_name">Rosehill Treats</string>
+    <string name="appbar_scrolling_view_behavior" translatable="false">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+
+    <string name="not_applicable">N/A</string>
+    <string name="invalid_format">Invalid Format</string>
+
+    <string name="volume_format">%1$.3f</string>
+    <string name="length_format">%1$.2f</string>
+
+    <string name="week_date_out_of_bounds">%1$s - Out of financial year bounds.</string>
+
+    <string name="week_number_not_applicable">N/A - Financial year start or end dates not set.</string>
+    <string name="week_number_out_of_bounds">%1$d - Out of financial year bounds.</string>
+
+    <string name="button_name_yes">YES</string>
+    <string name="button_name_no">NO</string>
+    <string name="button_name_ok">OK</string>
+
+    <!-- BASE WEEK ACTIVITY STRING RESOURCES -->
+    <string name="activity_base_week_tv_summary_treat_count_label">Treats:</string>
+    <string name="activity_base_week_tv_summary_week_total_volume_label">Volume:</string>
+
+    <string name="activity_base_week_tv_summary_undefined_week_date_message">
+        In order to create new treatment instances, appropriately configure the app settings and define the current working week. The latter is achievable by clicking the NEW WEEK button at the bottom.
+    </string>
+
+    <string name="activity_base_week_ib__summarycomplete_current_week_content_description">Complete the current week.</string>
+
+    <!-- CURRENT WEEK ACTIVITY STRING RESOURCES! -->
+    <string name="activity_current_week_label">CURRENT WEEK TREATMENTS</string>
+
+    <string name="activity_current_week_toolbar_title_current_week_defined">CURRENT WEEK (%1$s) TREATMENTS</string>
+    <string name="activity_current_week_toolbar_title_current_week_undefined">CURRENT WEEK UNDEFINED</string>
+
+    <string name="activity_current_week_menu_item_access_log_name">Treatment Log</string>
+    <string name="activity_current_week_menu_item_access_settings_name">Application Settings</string>
+    <string name="activity_current_week_menu_item_complete_week_name">Complete Week</string>
+    
+    <string name="activity_current_week_alert_title_treat_type">Treatment Type</string>
+    <string name="activity_current_week_alert_msg_treat_type">Choose the type of treatment that is to be created.</string>
+    <string name="activity_current_week_date_picker_title_define_current_week">New Current Week Date</string>
+    <string name="activity_current_week_date_picker_msg_define_current_week">Select the date of the next current week.</string>
+    <string name="activity_current_week_alert_title_defined_current_not_saved">Save Failure!</string>
+    <string name="activity_current_week_alert_msg_defined_current_not_saved">
+        Something went wrong - Android failed to save the defined \'current week\' date.
+    </string>
+    <string name="activity_current_week_alert_title_defined_current_week_date_out_of_bounds_before_start_of_financial_year">Invalid Date!</string>
+    <string name="activity_current_week_alert_msg_defined_current_week_date_before_start_of_financial_year">
+        The defined \' current week\' (%1$s) proceeds the start date of the financial year (%2$s). Please choose a date after (or including) the start of the financial year.
+    </string>
+    <string name="activity_current_week_alert_title_defined_current_week_date_after_end_of_financial_year">Warning!</string>
+    <string name="activity_current_week_alert_msg_defined_current_week_date_after_end_of_financial_year">
+        The defined \' current week\' (%1$s) exceeds the end date of the financial year (%2$s).
+    </string>
+    <string name="activity_current_week_alert_title_complete_current_week">Complete Week?</string>
+    <string name="activity_current_week_alert_msg_complete_current_week">
+        By clicking \'YES\' the current week will be finished, permitting a new week to be defined.
+    </string>
+
+
+    <string name="activity_current_week_btn_define_new_week_name">NEW WEEK</string>
+    <string name="activity_current_week_btn_define_new_treatment_name">NEW TREATMENT</string>
+
+    <!-- LOG ACTIVITY STRING RESOURCES! -->
+    <string name="activity_log_label">TREATMENT LOG</string>
+
+    <string name="activity_log_toolbar_label">Treatment Log</string>
+    <string name="activity_log_tab_database_name">DATABASE</string>
+    <string name="activity_log_tab_files_name">EXPORTED FILES</string>
+
+    <!-- PRIOR WEEK ACTIVITY STRINGS -->
+    <string name="activity_prior_week_label">PRIOR WEEK TREATMENTS</string>
+
+    <string name="activity_prior_week_toolbar_title">PRIOR WEEK (%1$s) TREATMENTS</string>
+
+    <string name="activity_prior_week_menu_item_enter_edit_mode_name">EDIT</string>
+    <string name="activity_prior_week_menu_item_done_edit_mode_name">SAVE</string>
+    <string name="activity_prior_week_menu_item_cancel_edit_mode_name">@android:string/cancel</string>
+
+    <string name="activity_prior_week_alert_title_enter_edit_mode">Confirm Edit Mode</string>
+    <string name="activity_prior_week_alert_msg_enter_edit_mode">
+        By selecting \'YES\' the week will be editable i.e. treatments can be deleted and added to this week.
+    </string>
+    <string name="activity_prior_week_alert_title_done_edit_mode">Finish Editing?</string>
+    <string name="activity_prior_week_alert_msg_done_edit_mode">
+        By selecting \'YES\' any and all deletions made will be saved to the database.
+    </string>
+    <string name="activity_prior_week_alert_title_cancel_edit_mode">Disregard Changes</string>
+    <string name="activity_prior_week_alert_msg_cancel_edit_mode">
+        By selecting \'YES\' any changes made to the database will be disregarded i.e. not saved.
+    </string>
+
+    <string name="activity_prior_week_btn_define_new_treatment_name">NEW TREATMENT</string>
+
+    <!-- OrderLogActivity string resources. -->
+    <string name="activity_order_log_label">Treatment Log</string>
+
+    <!-- TREAT ACTIVITY STRINGS! -->
+    <string name="activity_treat_label">TREAT</string>
+
+    <string name="activity_treat_toolbar_title_create_new_treat">NEW TREATMENT</string>
+    <string name="activity_treat_toolbar_title_update_existing_treat">EXISTING TREAT %1$d</string>
+
+    <string name="activity_treat_tv_type_label">Type:</string>
+    <string name="activity_treat_tv_packs_count_label">Packs:</string>
+    <string name="activity_treat_tv_volume_label">Volume:</string>
+
+    <string name="activity_treat_alert_select_title_timber_pack_type">Select Timber Pack Type</string>
+
+    <string name="activity_treat_btn_new_timber_pack">NEW TIMBER PACK</string>
+
+    <!-- FILE LOG FRAGMENT STRINGS! -->
+    <string name="fragment_file_log_alert_title_backup_undefined_app_id">Undefined Microsoft OneDrive AppID</string>
+    <string name="fragment_file_log_alert_msg_backup_undefined_app_id">Unable to backup / save due to undefined AppID. Navigate to settings and set the AppID.</string>
+
+    <string name="fragment_file_log_alert_title_file_backup_unsuccessful">File Backup Unsuccessful!</string>
+    <string name="fragment_file_log_alert_msg_file_backup_unsuccessful">
+        Unable to backup file. Ensure that a valid Microsoft OneDrive AppID is provided.
+        Moreover, ensure that the Microsoft OneDrive App has been installed.
+    </string>
+
+    <!-- WEEK LOG FRAGMENT STRINGS! -->
+    <string name="fragment_week_log_alert_title_write_undefined_financial_year">Undefined Financial Year</string>
+    <string name="fragment_week_log_alert_msg_write_undefined_financial_year">
+        Unable to export / write the treatment data due to undefined financial year. Navigate to settings in order to set the financial [start and end] year dates.
+    </string>
+
+    <string name="fragment_week_log_alert_title_write_no_storage">No Storage Media</string>
+    <string name="fragment_week_log_alert_msg_write_no_storage">
+        In order to export files please ensure that an SD card has been provided.
+    </string>
+
+
+    <!-- SETTINGS ACTIVITY STRING RESOURCES! -->
+    <string name="activity_settings_label">APPLICATION SETTINGS</string>
+
+    <string name="activity_settings_alert_title_incomplete_configuration">Incomplete Configuration</string>
+    <string name="activity_settings_alert_msg_incomplete_configuration">
+        Whist the application has not been configured, you are unable to create treatment data. Please ensure that all values have been provided and are correct.
+    </string>
+
+
+
+    <!-- SETTINGS MENU STRING RESOURCES! -->
+    <string name="menu_settings_item_export_yearly_summary_name">Export Yearly Summary</string>
+    <string name="menu_settings_item_delete_exported_files_name">Delete Exported Files</string>
+    <string name="menu_settings_item_truncate_tables_name">Truncate (Clear) Tables</string>
+    <string name="menu_settings_item_reset_financial_year_name">Reset Financial Year</string>
+
+
+    <!-- TREATMENT ITEM STRINGS! -->
+    <string name="item_treat_tv_number_label">Number:</string>
+    <string name="item_treat_tv_packs_count_label">Packs:</string>
+    <string name="item_treat_tv_volume_label">Volume:</string>
+    <string name="item_treat_tv_type_label">Type:</string>
+
+    <string name="item_treat_iv_colour_tag_content_description">Treatment Type Colour Tag.</string>
+    <string name="item_treat_ib_edit_option_content_description">Edit Treatment</string>
+    <string name="item_treat_ib_delete_option_content_description">Delete Treatment</string>
+
+    <!-- TREATMENT FILE DELETER STRINGS -->
+    <string name="treat_file_deleter_toast_deletion_successful">%1$d/%2$d files deleted.</string>
+
+    <string name="treat_file_deleter_alert_title_deletion_unsuccessful">Unsuccessful Deletion(s)</string>
+    <string name="treat_file_deleter_alert_msg_deletion_unsuccessful">Only %1$d/%2$d files were deleted.</string>
+
+    <!-- TREATMENT FILE WRITER STRINGS -->
+    <string name="treat_file_writer_toast_write_successful">File write successful.</string>
+
+    <string name="treat_file_writer_alert_title_write_unsuccessful">File Write Unsuccessful</string>
+    <string name="treat_file_writer_alert_msg_write_unsuccessful">
+        Unable to write file. Please ensure that the SD card is present (with write permissions enabled.)
+    </string>
+
+    <!-- FILE ITEM STRINGS! -->
+    <string name="item_file_tv_period_label">Period:</string>
+    <string name="item_file_tv_filename_label">Filename:</string>
+    <string name="item_file_tv_last_modified_label">Modified:</string>
+
+    <string name="item_file_ib_backup_option_content_description">Backup File</string>
+    <string name="item_file_ib_delete_option_content_description">Delete File</string>
+
+    <!-- WEEK ITEM STRINGS! -->
+    <string name="item_week_tv_date_label">Date:</string>
+    <string name="item_week_tv_week_number_label">Week:</string>
+    <string name="item_week_tv_treatments_count_label">Treats:</string>
+
+    <string name="item_week_lv_download_option_content_description">Download</string>
+
+    <!-- WEEK ITEM SUMMARY STRINGS! -->
+    <string name="item_week_summary_tv_treatments_count_label">Treats:</string>
+    <string name="item_week_summary_tv_volume_label">Volume:</string>
+
+    <!-- TIMBER PACK ITEM STRINGS! -->
+    <string name="item_timber_pack_tv_type_label">Type:</string>
+    <string name="item_timber_pack_tv_volume_label">Volume:</string>
+    <string name="item_timber_pack_tb_quantity_label">Quantity:</string>
+    <string name="item_timber_pack_tv_length_label">Length:</string>
+    <string name="item_timber_pack_tv_diameter_label">Diameter:</string>
+    <string name="item_timber_pack_tv_breadth_label">Breadth:</string>
+    <string name="item_timber_pack_tv_height_label">Height:</string>
+
+    <string name="item_timber_pack_iv_colour_tag_content_description">Timber Pack Type Colour Tag.</string>
+    <string name="item_timber_pack_ib_edit_option_content_description">Edit the timber pack.</string>
+    <string name="item_timber_pack_ib_delete_option_content_description">Delete Timber Pack</string>
+
+</resources>

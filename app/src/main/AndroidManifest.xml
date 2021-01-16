@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        package="uk.co.rosehilltimber.rosehilltreatmentapp">
+
+    <!-- Permissions employed by the application. -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- Define the application. -->
+    <application
+            android:name=".RosehillTreatments"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
+
+        <!-- DATABASE CONTENT PROVIDER - Access and manipulate database records. -->
+        <provider
+                android:name="uk.co.rosehilltimber.rosehilltreatmentapp.treatment.database.TreatDatabaseProvider"
+                android:authorities="uk.co.rosehilltimber.rosehilltreatmentapp.provider.treat"
+                android:exported="false"/>
+
+        <!-- CURRENT WEEK ACTIVITY - Main entry point for the application. -->
+        <activity
+                android:name=".activities.CurrentWeekActivity"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- TREAT ACTIVITY - Display individual treatment data. -->
+        <activity
+                android:name=".activities.TreatActivity"
+                android:label="@string/activity_treat_label"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:parentActivityName=".activities.CurrentWeekActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".activities.CurrentWeekActivity"/>
+        </activity>
+
+        <!-- LOG ACTIVITY - Display treatment log data. -->
+        <activity
+                android:name=".activities.LogActivity"
+                android:label="@string/activity_log_label"
+                android:screenOrientation="portrait"
+                android:launchMode="singleTask"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:parentActivityName=".activities.CurrentWeekActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".activities.CurrentWeekActivity"/>
+        </activity>
+
+        <!-- PRIOR WEEK ACTIVITY - Display treatment data from prior weeks. -->
+        <activity
+                android:name=".activities.PriorWeekActivity"
+                android:label="@string/activity_prior_week_label"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:parentActivityName=".activities.LogActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".activities.LogActivity"/>
+        </activity>
+
+        <!-- SETTINGS ACTIVITY - Display configurable settings to the user. -->
+        <activity
+                android:name=".activities.SettingsActivity"
+                android:label="@string/activity_settings_label"
+                android:screenOrientation="portrait"
+                android:theme="@style/AppTheme.NoActionBar"
+                android:parentActivityName=".activities.CurrentWeekActivity">
+            <meta-data
+                    android:name="android.support.PARENT_ACTIVITY"
+                    android:value=".activities.CurrentWeekActivity"/>
+        </activity>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".activities.TreatActivity">
+
+    <item
+            android:id="@+id/menu_treat_item_cancel_edit_or_save_action"
+            android:title="@android:string/cancel"
+            android:orderInCategory="1"
+            app:showAsAction="ifRoom"/>
+
+    <item
+            android:id="@+id/menu_treat_item_undo_operation_action"
+            android:title="@string/util_undo"
+            android:orderInCategory="2"
+            app:showAsAction="ifRoom"/>
+
+    <item
+            android:id="@+id/menu_treat_item_edit_treat_action"
+            android:title="@string/util_edit"
+            android:orderInCategory="3"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/menu_treat_item_save_editing_treat_action"
+            android:title="@string/util_save"
+            android:orderInCategory="4"
+            app:showAsAction="ifRoom"/>
+    <item
+            android:id="@+id/menu_treat_item_create_treat_action"
+            android:title="@string/util_create"
+            android:orderInCategory="5"
+            app:showAsAction="ifRoom"/>
+
+</menu>

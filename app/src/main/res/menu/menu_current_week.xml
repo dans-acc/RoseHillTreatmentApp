@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".activities.CurrentWeekActivity">
+
+    <!-- Item for navigating to the log activity. -->
+    <item
+            android:id="@+id/menu_current_week_item_open_log_action"
+            android:icon="@drawable/ic_history"
+            android:title="@string/activity_current_week_menu_item_access_log_name"
+            android:orderInCategory="1"
+            app:showAsAction="never"/>
+
+    <!-- Navigating to the settings activity. -->
+    <item
+            android:id="@+id/menu_current_week_item_open_settings_action"
+            android:title="@string/activity_current_week_menu_item_access_settings_name"
+            android:icon="@drawable/ic_settings"
+            android:orderInCategory="2"
+            app:showAsAction="never"/>
+</menu>

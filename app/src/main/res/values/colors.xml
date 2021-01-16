@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#282828</color>
+    <color name="colorPrimaryDark">#323232</color>
+    <color name="colorAccent">@android:color/holo_orange_light</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">#000000</color>
+
+    <!-- Treatment colour types -->
+    <color name="treatTypeBorderColour">#ff282828</color>
+    <color name="greenTreatTypeColour">#9cba60</color>
+    <color name="roundGreenTreatTypeColour">#d8e3be</color>
+    <color name="brownTreatTypeColour">#846522</color>
+
+</resources>

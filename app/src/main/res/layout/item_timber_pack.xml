@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?selectableItemBackground"
+        android:minHeight="72dp"
+        android:paddingEnd="?listPreferredItemPaddingRight"
+        android:paddingLeft="?listPreferredItemPaddingLeft"
+        android:paddingRight="?listPreferredItemPaddingRight"
+        android:paddingStart="?listPreferredItemPaddingLeft"
+        android:descendantFocusability="blocksDescendants">
+
+    <!-- The colour tag used for displaying the treatment type.. -->
+    <ImageView
+            android:id="@+id/item_treat_iv_colour_tag"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_centerVertical="false"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_treat_type_green"
+            android:clickable="false"
+            android:contentDescription="@string/item_timber_pack_iv_colour_tag_content_description"/>
+
+    <!-- Used for displaying the pack type information fields. -->
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@+id/item_timber_pack_options_layout"
+            android:layout_toRightOf="@+id/item_treat_iv_colour_tag"
+            android:layout_toStartOf="@+id/item_timber_pack_options_layout"
+            android:layout_toEndOf="@+id/item_treat_iv_colour_tag"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp">
+
+        <!-- The timber pack type. -->
+        <LinearLayout
+                android:id="@+id/item_timber_pack_layout_type_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:singleLine="true"
+                    android:text="@string/item_timber_pack_tv_type_label"
+                    style="@style/TextAppearance.AppCompat.Body2"/>
+            <TextView
+                    android:id="@+id/item_timber_pack_tv_type_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/not_applicable"
+                    style="@style/TextAppearance.AppCompat.Body2"/>
+        </LinearLayout>
+
+        <!-- The packs volume. -->
+        <LinearLayout
+                android:id="@+id/item_timber_pack_layout_volume_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:singleLine="true"
+                    android:text="@string/item_timber_pack_tv_volume_label"
+                    style="@style/TextAppearance.AppCompat.Body2"/>
+
+            <TextView
+                    android:id="@+id/item_timber_pack_tv_volume_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    tools:text="@string/not_applicable"
+                    style="@style/TextAppearance.AppCompat.Body2"/>
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/util_volume_units"
+                    style="@style/TextAppearance.AppCompat.Body2"/>
+
+        </LinearLayout>
+
+        <!-- Pack Quantity. -->
+        <LinearLayout
+                android:id="@+id/item_timber_pack_layout_quantity_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:singleLine="true"
+                    android:text="@string/field_quantity_label"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+            <TextView
+                    android:id="@+id/item_timber_pack_tv_quantity_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/not_applicable"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+        </LinearLayout>
+
+        <!-- Pack length. -->
+        <LinearLayout
+                android:id="@+id/item_timber_pack_layout_length_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:singleLine="true"
+                    android:text="@string/item_timber_pack_tv_length_label"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+            <TextView
+                    android:id="@+id/item_timber_pack_tv_length_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/not_applicable"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+        </LinearLayout>
+
+        <!-- Pack Diameter. -->
+        <LinearLayout
+                android:id="@+id/item_timber_pack_layout_diameter_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:singleLine="true"
+                    android:text="@string/item_timber_pack_tv_diameter_label"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+            <TextView
+                    android:id="@+id/item_timber_pack_tv_diameter_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/not_applicable"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+        </LinearLayout>
+
+        <!-- Pack Breadth. -->
+        <LinearLayout
+                android:id="@+id/item_timber_pack_layout_breadth_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:singleLine="true"
+                    android:text="@string/item_timber_pack_tv_breadth_label"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+            <TextView
+                    android:id="@+id/item_timber_pack_tv_breadth_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/not_applicable"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+        </LinearLayout>
+
+        <!-- Pack Height -->
+        <LinearLayout
+                android:id="@+id/item_timber_pack_layout_height_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:singleLine="true"
+                    android:text="@string/item_timber_pack_tv_height_label"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+            <TextView
+                    android:id="@+id/item_timber_pack_tv_height_field"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/not_applicable"
+                    style="@style/TextAppearance.AppCompat.Body1"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Used for displaying the file related options to the user. -->
+    <LinearLayout
+            android:id="@+id/item_timber_pack_options_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/item_ib_height"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="19dp"
+            android:layout_centerVertical="false"
+            android:orientation="horizontal">
+
+        <!-- The button used for editing the timber pack. -->
+        <ImageButton
+                android:id="@+id/item_timber_pack_ib_edit_action"
+                android:layout_width="@dimen/item_ib_width"
+                android:layout_height="@dimen/item_ib_height"
+                android:layout_marginRight="8dp"
+                android:layout_marginEnd="8dp"
+                android:focusable="false"
+                android:src="@drawable/ic_edit_black"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/item_timber_pack_ib_edit_option_content_description"/>
+
+        <!-- The button used for deleting the timber pack. -->
+        <ImageButton
+                android:id="@+id/item_timber_pack_ib_delete_action"
+                android:layout_width="@dimen/item_ib_width"
+                android:layout_height="@dimen/item_ib_height"
+                android:focusable="false"
+                android:src="@drawable/ic_close"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/item_timber_pack_ib_delete_option_content_description"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
